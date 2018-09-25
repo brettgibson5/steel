@@ -13,8 +13,11 @@ header{
   }
 }
 #slider{
-  height: 400px;
+  height: 60vh;
+  max-height: 700px;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
   background: #fa501e;
@@ -22,32 +25,41 @@ header{
     position: absolute;
     height: 100%;
     top: 0px;
-    left: -51%;
+    left: -35%;
     width: 100%;
     overflow: hidden;
-    transform: skewX(-35deg);
+    transform: skewX(-55deg);
     &.active{
 
     }
     .bg{
-      transform: skewX(35deg);
+      transform: skewX(55deg);
       position: absolute;
       top: -25%;
       left: -25%;
-      height: 150%;
-      width: 150%;
+      height: 155%;
+      width: 155%;
       background-size: cover;
+      background-position: center;
       background-repeat: no-repeat;
     }
     &#mario{
-      right: -50%;
+      right: -66%;
       left: auto;
+      &.active{
+        right: -28%;
+      }
       .bg{
         background-image: url(../img/slide/mario.jpg);
       }
     }
-    &#zelda .bg{
-      background-image: url(../img/slide/zelda.jpg);
+    &#zelda{
+      &.active{
+        right: -28%;
+      }
+      .bg{
+        background-image: url(../img/slide/zelda.jpg);
+      }
     }
   }
 }
