@@ -1,4 +1,5 @@
 body {
+  font-family: 'Roboto Condensed', sans-serif;
   background: #000;
   padding: 10px;
   font-size: 16px; }
@@ -9,12 +10,14 @@ header {
 header img {
   width: 200px; }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto; }
+
 #slider {
   height: 60vh;
   max-height: 700px;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   position: relative;
   overflow: hidden;
   background: #fa501e; }
@@ -22,30 +25,86 @@ header img {
     position: absolute;
     height: 100%;
     top: 0px;
-    left: -35%;
     width: 100%;
     overflow: hidden;
     transform: skewX(-55deg); }
-    #slider .slide .bg {
+    #slider .slide.active .text {
+      display: inline-block; }
+    #slider .slide .content {
       transform: skewX(55deg);
       position: absolute;
-      top: -25%;
-      left: -25%;
-      height: 155%;
-      width: 155%;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      padding: 3em;
+      box-sizing: border-box;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat; }
+    #slider .slide .gradient {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, transparent 50%, transparent 100%);
+      background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, transparent 50%, transparent 100%);
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, transparent 50%, transparent 100%); }
+    #slider .slide .text {
+      position: relative;
+      color: #fff;
+      display: none;
+      width: 30%;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
+      #slider .slide .text h1 {
+        margin: 0;
+        line-height: 0.9em;
+        font-size: 4em; }
+      #slider .slide .text .btn {
+        display: inline-block;
+        padding: 0.5em 1.5em;
+        border: 2px solid #fff;
+        border-radius: 4px;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.2);
+        font-size: 1.4em;
+        font-weight: 800;
+        text-shadow: none;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 1px;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); }
+        #slider .slide .text .btn:hover {
+          text-shadow: none;
+          background: #fff;
+          color: #2085d1; }
+    #slider .slide#zelda {
+      border-right: 7px solid #fa501e;
+      z-index: 10;
+      left: -70%; }
+      #slider .slide#zelda.active {
+        left: -30%; }
+        #slider .slide#zelda.active .content {
+          right: -30%; }
+      #slider .slide#zelda .content {
+        background-image: url(../img/slide/zelda.jpg);
+        right: -70%; }
     #slider .slide#mario {
-      right: -66%;
-      left: auto; }
+      right: -70%; }
       #slider .slide#mario.active {
-        right: -28%; }
-      #slider .slide#mario .bg {
-        background-image: url(../img/slide/mario.jpg); }
-    #slider .slide#zelda.active {
-      right: -28%; }
-    #slider .slide#zelda .bg {
-      background-image: url(../img/slide/zelda.jpg); }
+        right: -30%; }
+        #slider .slide#mario.active .content {
+          left: -30%;
+          text-align: right; }
+        #slider .slide#mario.active .btn:hover {
+          color: #e30709; }
+      #slider .slide#mario .content {
+        background-image: url(../img/slide/mario.jpg);
+        left: -70%; }
+      #slider .slide#mario .gradient {
+        background: -moz-linear-gradient(left, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.5) 100%);
+        background: -webkit-linear-gradient(left, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.5) 100%);
+        background: linear-gradient(to right, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.5) 100%); }
 
 /*# sourceMappingURL=style.css.map */
