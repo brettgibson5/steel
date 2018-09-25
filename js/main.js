@@ -1,3 +1,4 @@
-function testFunction() {
+function setActive() {
+    console.log('yello');
 }
-testFunction();
+setActive();

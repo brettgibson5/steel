@@ -1,12 +1,41 @@
-body{
+body {
   background: #000;
   padding: 10px;
-  font-size: 16px;
-}
+  font-size: 16px; }
 
-header{
-  padding: 10px 0;
-}
-header img{
-  width: 200px;
-}
+header {
+  padding: 10px 0; }
+
+header img {
+  width: 200px; }
+
+#slider {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #fa501e; }
+  #slider .slide {
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    left: -51%;
+    width: 100%;
+    overflow: hidden;
+    transform: skewX(-35deg); }
+    #slider .slide .bg {
+      transform: skewX(35deg);
+      position: absolute;
+      top: -25%;
+      left: -25%;
+      height: 150%;
+      width: 150%;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    #slider .slide#mario {
+      right: -50%;
+      left: auto; }
+      #slider .slide#mario .bg {
+        background-image: url(../img/slide/mario.jpg); }
+    #slider .slide#zelda .bg {
+      background-image: url(../img/slide/zelda.jpg); }
