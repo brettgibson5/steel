@@ -14,16 +14,6 @@ header img {
   max-width: 1200px;
   margin: 0 auto; }
 
-@-webkit-keyframes rStart {
-  0% {
-    right: -70%; }
-  100% {
-    right: -30%; } }
-@-webkit-keyframes rEnd {
-  0% {
-    right: -30; }
-  100% {
-    right: -70%; } }
 #slider {
   height: 60vh;
   max-height: 490px;
@@ -37,7 +27,8 @@ header img {
     top: 0px;
     width: 100%;
     overflow: hidden;
-    transform: skewX(-55deg); }
+    transform: skewX(-55deg);
+    transition: left 0.25s, right 0.25s; }
     #slider .slide.active .text {
       opacity: 1;
       margin: 0; }
@@ -51,7 +42,8 @@ header img {
       box-sizing: border-box;
       background-size: cover;
       background-position: center;
-      background-repeat: no-repeat; }
+      background-repeat: no-repeat;
+      transition: left 0.25s, right 0.25s; }
     #slider .slide .gradient {
       position: absolute;
       top: 0;

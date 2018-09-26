@@ -18,17 +18,6 @@ header{
   margin: 0 auto;
 }
 
-@-webkit-keyframes rStart {
-  0% { right: -70%;}
-  100%{ right : -30%;}
-}
-
-@-webkit-keyframes rEnd {
-  0% { right: -30;}
-  100%{ right : -70%;}
-}
-
-
 #slider{
   height: 60vh;
   max-height: 490px;
@@ -43,6 +32,7 @@ header{
     width: 100%;
     overflow: hidden;
     transform: skewX(-55deg);
+    transition: left 0.25s, right 0.25s;
     &.active{
       .text{
         opacity: 1;
@@ -60,6 +50,7 @@ header{
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      transition: left 0.25s, right 0.25s;
     }
     .gradient{
       position: absolute;
@@ -117,15 +108,11 @@ header{
         left: -30%;
         .content{
           right: -30%;
-          // -webkit-animation-name: rEnd;
-          // -webkit-animation-duration: 1s;
         }
       }
       .content{
         background-image: url(../img/slide/zelda.jpg);
         right: -70%;
-        // -webkit-animation-name: rStart;
-        // -webkit-animation-duration: 1s;
       }
     }
     &#mario{
